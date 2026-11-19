@@ -1,24 +1,21 @@
-# Nikhil | Mathematics, Python & Formal Methods Portfolio
+# Lean 4 Formalization Practice
 
-A reproducible starter portfolio demonstrating numerical data generation, mathematical algorithms, unit tests, and introductory Lean 4 theorem statements/proofs.
+Original educational examples for exploring theorem proving in Lean 4.
 
-## Included
-- `src/run_analysis.py`: creates 10,000 **synthetic** observations with a fixed seed and writes summary statistics to `RESULTS.md`.
-- `src/number_theory.py`: prime testing, Euclidean GCD, and Fibonacci sequence.
-- `tests/test_number_theory.py`: Python unit tests.
-- `lean/BasicProofs.lean`: three beginner Lean 4 examples, **not compiled or verified in this environment**.
+## Contents
+- `Algebra.lean`: basic natural-number equalities
+- `Logic.lean`: conjunction, disjunction, implication, contradiction
+- `NumberTheory.lean`: inequalities, parity, divisibility
 
-## Reproduce
+## Requirements
+Install Lean 4 and Mathlib. These examples have **not been compiled in this environment**; they are draft examples to verify locally before describing them as machine-checked proofs.
+
+To verify with a Mathlib project, place the files inside the project and run:
+
 ```bash
-python -m unittest discover -s tests -v
-python src/run_analysis.py
+lake env lean Algebra.lean
+lake env lean Logic.lean
+lake env lean NumberTheory.lean
 ```
 
-## Verify Lean examples
-Install Lean 4 with elan, then run:
-```bash
-lake env lean lean/BasicProofs.lean
-```
-
-## Integrity note
-This repository is a newly created portfolio starter, not evidence of prior professional experience, published research, or contributions to mathlib. Describe Lean experience in applications based only on what you have personally completed and verified.
+The project is a learning portfolio, not evidence of prior professional Lean experience. Please accurately represent your own contributions and experience when applying for work.
